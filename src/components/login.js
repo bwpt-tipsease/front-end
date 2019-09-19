@@ -2,13 +2,13 @@ import React from 'react';
 import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
 
-const LoginForm = props => {
+const LoginForm = ({ errors, touched }) => {
 	return (
 		<Form>
-			{props.errors.email && <p className="error">{props.errors.email}</p>}
+			{touched.email && errors.email && <p className="error">{errors.email}</p>}
 			<Field type="email" name="email" placeholder="email" />
 
-			{props.errors.password && <p className="error">{props.errors.password}</p>}
+			{touched.password && errors.password && <p className="error">{errors.password}</p>}
 			<Field type="password" name="password" placeholder="password" />
 			<button type="submit">Submit</button>
 		</Form>
