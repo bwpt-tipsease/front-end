@@ -5,7 +5,10 @@ import * as yup from 'yup';
 const LoginForm = props => {
 	return (
 		<Form>
+			{props.errors.email && <p className="error">{props.errors.email}</p>}
 			<Field type="email" name="email" placeholder="email" />
+
+			{props.errors.password && <p className="error">{props.errors.password}</p>}
 			<Field type="password" name="password" placeholder="password" />
 			<button type="submit">Submit</button>
 		</Form>
