@@ -1,14 +1,21 @@
 import React from 'react';
-import { withFormik } from 'formik';
+import { withFormik, Field, Form } from 'formik';
 
 const LoginForm = props => {
 	return (
-		<form>
-			<input type="email" name="email" placeholder="email" />
-			<input type="password" name="password" placeholder="password" />
+		<Form>
+			<Field type="email" name="email" placeholder="email" />
+			<Field type="password" name="password" placeholder="password" />
 			<button type="submit">Submit</button>
-		</form>
+		</Form>
 	);
 };
 
-export default withFormik()(LoginForm);
+export default withFormik({
+	mapPropsToValues: props => {
+		return {
+			email: props.email,
+			password: props.password
+		};
+	}
+})(LoginForm);
