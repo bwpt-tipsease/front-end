@@ -17,5 +17,8 @@ export default withFormik({
 			email: props.email,
 			password: props.password
 		};
+	},
+	handleSubmit: values => {
+		console.log(values);
 	}
 })(LoginForm);
