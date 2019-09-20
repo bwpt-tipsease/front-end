@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
 
 const LoginForm = ({ errors, touched, status, resetForm }) => {
-	console.log(status);
+	console.table(status);
+	const [ users, setUsers ] = useState([]);
 	return (
 		<div>
 			<h1>Login</h1>
