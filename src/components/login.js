@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
@@ -6,6 +6,16 @@ import * as yup from 'yup';
 const LoginForm = ({ errors, touched, status, resetForm }) => {
 	console.table(status);
 	const [ users, setUsers ] = useState([]);
+
+	useEffect(
+		() => {
+			if (status) {
+				setUsers([ ...users, status ]);
+			}
+		},
+		[ status ]
+	);
+
 	return (
 		<div>
 			<h1>Login</h1>
@@ -17,6 +27,13 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 				<Field type="password" name="password" placeholder="password" autocomplete="" />
 				<button type="submit">Submit</button>
 			</Form>
+
+			{users.map((user, index) =>
+				// <div key={index} className="user-info">
+				// 	<p>Email: {user.email}</p>
+				// </div>
+				console.log('user', user)
+			)}
 		</div>
 	);
 };
