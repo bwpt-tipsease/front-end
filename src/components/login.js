@@ -4,12 +4,13 @@ import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
 
 const LoginForm = ({ errors, touched, status, resetForm }) => {
-	console.table(status);
+	// console.log('status', status);
 	const [ users, setUsers ] = useState([]);
 
 	useEffect(
 		() => {
 			if (status) {
+				// sets users stored in state to the status - which is response.data
 				setUsers([ ...users, status ]);
 			}
 		},
