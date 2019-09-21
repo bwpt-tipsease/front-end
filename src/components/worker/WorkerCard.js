@@ -2,10 +2,11 @@ import React from 'react';
 
 function WorkerCard(props) {
 	return (
-		<div>
-			<h1>This is the h1</h1>
-			<h2>This is an h2</h2>
-			<h2>This is an h2</h2>
+		<div className="worker-card">
+			<img src="https://fakeimg.pl/300/" />
+			<h1>Name</h1>
+			<h2>Tagline</h2>
+			<h3>Time in job</h3>
 		</div>
 	);
 }
