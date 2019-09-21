@@ -1,33 +1,84 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.error {
+	color: #e00;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+	background-color: #ccc;
+	margin: 10px auto;
+	padding: 75px 40px;
+	max-width: 500px;
+	border-radius: 8px;
+	font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+	color: #444;
+	border: none;
+	border-radius: 4px;
+	padding: 20px;
+	width: 75%;
+	margin: 0 auto;
+	/* box-sizing: border-box; */
+	margin-bottom: 30px;
+	display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus:not([type="checkbox"]) {
+	outline: 2px solid #aaa;
+}
+
+input[type="checkbox"] {
+	display: inline-block;
+	width: 5%;
+}
+
+button {
+	background-color: #444;
+	color: #fff;
+	padding: 20px 0;
+	border-radius: 7px;
+	width: 82.5%;
+	margin: 0 auto;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: rgba(68, 68, 68, 0.9);
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	font-size: 15px;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	font-size: 15px;
+}
+:-ms-input-placeholder {
+	/* IE 10+ */
+	font-size: 15px;
+}
+:-moz-placeholder {
+	/* Firefox 18- */
+	font-size: 15px;
+}
+
+.user-info {
+	background-color: #444;
+	color: #eee;
+	margin: 25px auto;
+	padding: 20px 40px;
+	max-width: 500px;
+	border-radius: 8px;
+	font-size: 20px;
+	text-align: left;
 }
