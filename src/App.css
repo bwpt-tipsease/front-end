@@ -1,6 +1,48 @@
 .App {
 	text-align: center;
 }
+.worker-card {
+	border: 1px solid #000;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+	line-height: 1.1;
+	margin: 10px;
+}
+
+.worker-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+}
+.worker-list a {
+	width: 33%;
+	text-decoration: none;
+}
+.worker-list a,
+a:visited,
+a:hover,
+a:active {
+	color: inherit;
+}
+
+.worker-list > * {
+	cursor: pointer;
+	transition: 0.25s opacity, 0.25s transform;
+}
+
+.worker-list:hover > *,
+.worker-list:focus-within > * {
+	opacity: 0.25;
+	transform: scale(0.95);
+}
+
+.worker-list:hover > :hover,
+.worker-list:focus-within > :focus {
+	transform: scale(1.05);
+	opacity: 1;
 
 .error {
 	color: #e00;
