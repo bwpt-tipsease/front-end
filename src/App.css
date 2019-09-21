@@ -1,7 +1,6 @@
 .App {
 	text-align: center;
 }
-
 .worker-card {
 	border: 1px solid #000;
 	border-radius: 5px;
@@ -44,4 +43,84 @@ a:active {
 .worker-list:focus-within > :focus {
 	transform: scale(1.05);
 	opacity: 1;
+
+.error {
+	color: #e00;
+}
+
+form {
+	background-color: #ccc;
+	margin: 10px auto;
+	padding: 75px 40px;
+	max-width: 500px;
+	border-radius: 8px;
+	font-size: 16px;
+}
+
+input {
+	color: #444;
+	border: none;
+	border-radius: 4px;
+	padding: 20px;
+	width: 75%;
+	margin: 0 auto;
+	/* box-sizing: border-box; */
+	margin-bottom: 30px;
+	display: flex;
+}
+
+input:focus:not([type="checkbox"]) {
+	outline: 2px solid #aaa;
+}
+
+input[type="checkbox"] {
+	display: inline-block;
+	width: 5%;
+}
+
+button {
+	background-color: #444;
+	color: #fff;
+	padding: 20px 0;
+	border-radius: 7px;
+	width: 82.5%;
+	margin: 0 auto;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: rgba(68, 68, 68, 0.9);
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	font-size: 15px;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	font-size: 15px;
+}
+:-ms-input-placeholder {
+	/* IE 10+ */
+	font-size: 15px;
+}
+:-moz-placeholder {
+	/* Firefox 18- */
+	font-size: 15px;
+}
+
+.user-info {
+	background-color: #444;
+	color: #eee;
+	margin: 25px auto;
+	padding: 20px 40px;
+	max-width: 500px;
+	border-radius: 8px;
+	font-size: 20px;
+	text-align: left;
 }
