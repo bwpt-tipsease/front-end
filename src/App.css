@@ -43,6 +43,7 @@ a:active {
 .worker-list:focus-within > :focus {
 	transform: scale(1.05);
 	opacity: 1;
+}
 
 .error {
 	color: #e00;
