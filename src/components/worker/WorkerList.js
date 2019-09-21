@@ -17,7 +17,8 @@ function WorkerList(props) {
 	}, []);
 
 	return (
-		<div className="worker-list">
+		<div>
+			<h1>Select a worker to tip</h1>
 			<div className="worker-list">
 				{data.map((worker, index) => {
 					return <WorkerCard worker={worker} key={index} />;
