@@ -18,7 +18,11 @@ function WorkerList(props) {
 
 	return (
 		<div className="worker-list">
-			<WorkerCard />
+			<div className="worker-list">
+				{data.map(worker => {
+					return <WorkerCard />;
+				})}
+			</div>
 		</div>
 	);
 }
