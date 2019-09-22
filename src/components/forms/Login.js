@@ -11,7 +11,7 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 		() => {
 			if (status) {
 				// sets users stored in state to the status - which is response.data
-				setUsers([ ...users, status ]);
+				setUsers(prevUsers => [ ...prevUsers, status ]);
 			}
 		},
 		[ status ]
