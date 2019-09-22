@@ -4,7 +4,7 @@ function WorkerCard(props) {
 	return (
 		<a href="http://www.google.com">
 			<div className="worker-card">
-				<img src={props.worker.avatar} />
+				<img src={props.worker.avatar} alt="worker" />
 				<h1>
 					{props.worker.first_name} {props.worker.last_name}
 				</h1>
