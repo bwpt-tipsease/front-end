@@ -42,8 +42,8 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 export default withFormik({
 	mapPropsToValues: props => {
 		return {
-			email: props.email,
-			password: props.password
+			email: props.email || '',
+			password: props.password || ''
 		};
 	},
 	validationSchema: yup.object().shape({
