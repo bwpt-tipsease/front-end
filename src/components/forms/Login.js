@@ -29,11 +29,13 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 				<button type="submit">Submit</button>
 			</Form>
 
-			{users.map((user, index) =>
-				// <div key={index} className="user-info">
-				// 	<p>Email: {user.email}</p>
-				// </div>
-				console.log('user', user)
+			{users.map(
+				(user, index) => (
+					<div key={index} className="user-info">
+						<p>Email: {user.email}</p>
+					</div>
+				)
+				// console.log('user', user)
 			)}
 		</div>
 	);
@@ -50,7 +52,7 @@ export default withFormik({
 		email: yup.string().email().required('* Email is required'),
 		password: yup.string().min(8, '* Password must be 8 characters').required('* Password is required')
 	}),
-	handleSubmit: (values, { setStatus }) => {
+	handleSubmit: (values, { setStatus, resetForm }) => {
 		console.log('values', values);
 
 		axios
@@ -59,5 +61,7 @@ export default withFormik({
 				setStatus(response.data);
 			})
 			.catch(error => console.log(error));
+
+		resetForm();
 	}
 })(LoginForm);
