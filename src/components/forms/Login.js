@@ -25,7 +25,7 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 				<Field type="email" name="email" placeholder="Email" />
 
 				{touched.password && errors.password && <p className="error">{errors.password}</p>}
-				<Field type="password" name="password" placeholder="Password" autocomplete="" />
+				<Field type="password" name="password" placeholder="Password" autoComplete="" />
 				<button type="submit">Submit</button>
 			</Form>
 
