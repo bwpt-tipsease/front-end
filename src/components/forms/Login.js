@@ -52,13 +52,14 @@ export default withFormik({
 		email: yup.string().email().required('* Email is required'),
 		password: yup.string().min(8, '* Password must be 8 characters').required('* Password is required')
 	}),
-	handleSubmit: (values, { setStatus, resetForm }) => {
+	handleSubmit: (values, { props, setStatus, resetForm }) => {
 		console.log('values', values);
 
 		axios
 			.post('https://reqres.in/api/users', values)
 			.then(response => {
 				setStatus(response.data);
+				props.history.push('/workers');
 			})
 			.catch(error => console.log(error));
 
