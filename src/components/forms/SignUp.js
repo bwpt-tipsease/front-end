@@ -21,11 +21,8 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 		<div>
 			<h1>Sign Up</h1>
 			<Form>
-				{touched.firstname && errors.firstname && <p className="error">{errors.firstname}</p>}
-				<Field type="firstname" name="firstname" placeholder="First Name" />
-
-				{touched.LastName && errors.LastName && <p className="error">{errors.LastName}</p>}
-				<Field type="LastName" name="LastName" placeholder="Last Name" />
+				{touched.username && errors.username && <p className="error">{errors.username}</p>}
+				<Field type="text" name="username" placeholder="User Name" />
 
 				{touched.email && errors.email && <p className="error">{errors.email}</p>}
 				<Field type="email" name="email" placeholder="Email" />
@@ -34,25 +31,31 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 				<Field type="password" name="password" placeholder="Password" autoComplete="" />
 
 				{touched.confirmpassword && errors.confirmpassword && <p className="error">{errors.confirmpassword}</p>}
-				<Field type="confirmpassword" name="confirmpassword" placeholder="Confirm Password" autoComplete="" />
+				<Field type="password" name="confirmpassword" placeholder="Confirm Password" autoComplete="" />
 
 
 				{touched.creditcardnumber && errors.creditcardnumber && <p className="error">{errors.creditcardnumber}</p>}
-				<Field type="creditcardnumber" name="creditcardnumber" placeholder="Credti Card Number" autoComplete="" />
+				<Field type="number" name="creditcardnumber" placeholder="Credti Card Number" autoComplete="" />
 
  				{touched.expdate && errors.expdate && <p className="error">{errors.expdate}</p>}
-				<Field type="expdate" name="expdate" placeholder="Expiration Date" autoComplete="" />
+				<Field type="number" name="expdate" placeholder="Expiration Date" autoComplete="" />
 				
 				{touched.cvcnumbers && errors.cvcnumbers && <p className="error">{errors.cvcnumbers}</p>}
-				<Field type="cvcnumbers" name="cvcnumbers" placeholder="CVC Numbers" autoComplete="" />
+				<Field type="numbers" name="cvcnumbers" placeholder="CVC Numbers" autoComplete="" />
 
 			<h2> Billing Address </h2>
-			
+
+				{touched.firstname && errors.firstname && <p className="error">{errors.firstname}</p>}
+				<Field type="text" name="firstname" placeholder="First Name" autoComplete="" />
+
+				{touched.lastname && errors.lastname && <p className="error">{errors.lastname}</p>}
+				<Field type="text" name="lastname" placeholder="Last Name" autoComplete="" />
+
 				{touched.streetaddress && errors.streetaddress && <p className="error">{errors.streetaddress}</p>}
-				<Field type="streetaddress" name="streetaddress" placeholder="Street Address" autoComplete="" />
+				<Field type="text" name="streetaddress" placeholder="Street Address" autoComplete="" />
 
 				{touched.zipcode && errors.zipcode && <p className="error">{errors.zipcode}</p>}
-				<Field type="zipcode" name="zipcode" placeholder="Zip Code" autoComplete="" />
+				<Field type="number" name="zipcode" placeholder="Zip Code" autoComplete="" />
 
 
 				<button type="submit">Submit</button>
@@ -81,7 +84,8 @@ export default withFormik({
 	},
 	validationSchema: yup.object().shape({
 		email: yup.string().email().required('* Email is required'),
-		password: yup.string().min(8, '* Password must be 8 characters').required('* Password is required')
+		password: yup.string().min(8, '* Password must be 8 characters').required('* Password is required'),
+		username: yup.string().min(6, '* Username must contain 6 charaters').required('* Username is required')
 	}),
 	handleSubmit: (values, { setStatus, resetForm }) => {
 		console.log('values', values);
