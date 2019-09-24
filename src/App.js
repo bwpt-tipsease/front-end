@@ -12,6 +12,16 @@ function App() {
 	console.log(workers);
 	return (
 		<div className="App">
+			{/* Nav */}
+			<nav className="nav">
+				<div className="nav-logo">
+					<p>Tipsease</p>
+				</div>
+				<div className="nav-links">
+					<Link to="/">Login</Link>
+					<Link to="/workers">Workers</Link>
+				</div>
+			</nav>
 			{/* Routes */}
 			<Route exact path="/" component={LoginForm} />
 			<Route exact path="/workers" render={props => <ServiceWorkerList workers={workers} {...props} />} />
