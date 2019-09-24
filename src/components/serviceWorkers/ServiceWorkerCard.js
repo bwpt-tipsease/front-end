@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Route, NavLink } from 'react-router-dom';
-// import items from "../data";
 
 function ServiceWorkerCard(props) {
 	console.log('Card Props', props);
@@ -12,7 +10,7 @@ function ServiceWorkerCard(props) {
 	// console.log(props.match.params.id);
 	// console.log(props);
 	return (
-		<div className="">
+		<div className="worker-card">
 			<img src={worker.avatar} alt="worker" />
 			<h1>
 				{worker.first_name} {worker.last_name}
