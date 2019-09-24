@@ -15,7 +15,8 @@ function ServiceWorkerCard(props) {
 			<h1>
 				{worker.first_name} {worker.last_name}
 			</h1>
-			<h4>Tagline: {worker.email}</h4>
+			<h3>Job: This is where my (job) will go at (such and such restaurant)</h3>
+			<h4>Tagline: "This is where my tagline will go"</h4>
 			<h4>Time in job: {worker.id} months</h4>
 		</div>
 	);

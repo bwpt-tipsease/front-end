@@ -15,8 +15,11 @@ function ServiceWorkerList(props) {
 							<h1>
 								{worker.first_name} {worker.last_name}
 							</h1>
-							<h4>Tagline: {worker.email}</h4>
-							<h4>Time in job: {worker.id} months</h4>
+							<h3>Job: This is my (job) at (such and such restaurant)</h3>
+							<h4>Tagline: "This is my tagline"</h4>
+							<h4>
+								Time in job: {worker.id} years, {worker.id} months
+							</h4>
 						</div>
 					</Link>
 				))}
