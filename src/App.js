@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Link } from 'react-router-dom';
+import axios from 'axios';
 import LoginForm from './components/forms/Login';
+import SignUp from './components/forms/SignUp';
 import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
 
 import './App.css';
-import SignUp from './components/forms/SignUp';
-import workerData from './data';
 
 function App() {
-	const [ workers, setWorker ] = useState(workerData);
-	console.log(workers);
+	const [ workers, setWorkers ] = useState([]);
+
+	useEffect(() => {
+		axios
+			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers')
+			.then(res => {
+				setWorkers(res.data);
+			})
+			.catch(err => console.log(err));
+	}, []);
+
+	console.log('workers', workers);
+
 	return (
 		<div className="App">
 			{/* These will need to be separated into routes */}
