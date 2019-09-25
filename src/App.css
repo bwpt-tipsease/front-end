@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
+	color: #57d978;
 }
 .worker-card {
 	border: 1px solid #000;
@@ -46,13 +47,13 @@ a:active {
 }
 
 .error {
-	color: #e00;
+	color: #57d978;
 }
 
 form {
-	background-color: #ccc;
-	margin: 10px auto;
-	padding: 75px 40px;
+	/* background-color: #ccc; */
+	margin: 5px auto;
+	padding: 40px;
 	max-width: 500px;
 	border-radius: 8px;
 	font-size: 16px;
@@ -60,18 +61,18 @@ form {
 
 input {
 	color: #444;
-	border: none;
+	border: 1px solid #aaa;
 	border-radius: 4px;
 	padding: 20px;
 	width: 75%;
 	margin: 0 auto;
-	/* box-sizing: border-box; */
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	display: flex;
 }
 
 input:focus:not([type="checkbox"]) {
-	outline: 2px solid #aaa;
+	outline: 1px solid #999;
+	border-radius: 4px;
 }
 
 input[type="checkbox"] {
@@ -80,17 +81,17 @@ input[type="checkbox"] {
 }
 
 button {
-	background-color: #444;
+	background-color: #57d978;
 	color: #fff;
 	padding: 20px 0;
 	border-radius: 7px;
 	width: 82.5%;
 	margin: 0 auto;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 button:hover {
-	background-color: rgba(68, 68, 68, 0.9);
+	background-color: #4ec86d;
 	cursor: pointer;
 }
 
@@ -127,9 +128,10 @@ button:focus {
 }
 
 .nav {
-	border: 1px solid #000;
 	display: flex;
 	justify-content: space-between;
+	color: #57d978;
+	padding-bottom: 50px;
 }
 
 .nav-links {
@@ -138,4 +140,63 @@ button:focus {
 
 .nav-links a {
 	padding: 10px;
+	text-decoration: none;
+	font-size: 50px;
+}
+
+.nav-logo {
+	text-align: left;
+	display: flex;
+	padding: 30px 40px;
+}
+
+.nav-logo p {
+	font-size: 50px;
+	margin: 0;
+}
+.nav-logo img {
+	width: 60px;
+	height: 60px;
+	padding-right: 25px;
+}
+
+.tabs {
+	color: #57d978;
+	font-size: 20px;
+	padding: 13px 0 7px 0;
+	display: flex;
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+.tabs div {
+	margin: auto;
+}
+
+.tabs a {
+	margin: 1px;
+	background-color: #fff;
+	border: 1px solid #57d978;
+	padding: 15px 75px;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+.tabs a.isActive {
+	color: #57d978;
+	border: 1px solid #57d978;
+	background-color: #fff;
+	color: #fff;
+	background-color: #57d978;
+}
+
+.tabs a:hover {
+	color: #57d978;
+	border: 1px solid rgba(87, 217, 120, 0.4);
+	background-color: rgba(87, 217, 120, 0.4);
+}
+
+.tabs a.isActive:hover {
+	background-color: #57d978;
+	color: #fff;
 }

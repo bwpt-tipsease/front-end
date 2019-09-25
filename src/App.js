@@ -5,6 +5,7 @@ import LoginForm from './components/forms/Login';
 import SignUp from './components/forms/SignUp';
 import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
+import TabNav from './components/tabs/TabNav.js';
 
 import './App.css';
 
@@ -29,14 +30,16 @@ function App() {
 			{/* Nav */}
 			<nav className="nav">
 				<div className="nav-logo">
+					<img src="https://bit.ly/2n7dW0i" alt="logo" />
 					<p>Tipsease</p>
 				</div>
 				<div className="nav-links">
-					<Link to="/">Login</Link>
-					<Link to="/workers">Workers</Link>
+					{/* <Link to="/">Login</Link>
+					<Link to="/workers">Workers</Link> */}
 				</div>
 			</nav>
 			{/* Routes */}
+			<TabNav />
 			<Route exact path="/" component={LoginForm} />
 			<Route exact path="/workers" render={props => <ServiceWorkerList workers={workers} {...props} />} />
 			<Route path="/workers/:id" render={props => <ServiceWorkerCard workers={workers} {...props} />} />
