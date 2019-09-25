@@ -19,7 +19,7 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 
 	return (
 		<div>
-			<h1>Login</h1>
+			{/* <h1>Login</h1> */}
 			<Form>
 				{touched.email && errors.email && <p className="error">{errors.email}</p>}
 				<Field type="email" name="email" placeholder="Email" />

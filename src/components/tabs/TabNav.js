@@ -1,24 +1,18 @@
 import React from 'react';
-import { Tab, Menu, Icon } from 'semantic-ui-react';
+import { Tab, Menu } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
-const Nav = props => <NavLink exact {...props} activeClassName="active" />;
+const Nav = props => <NavLink exact {...props} activeClassName="isActive" className="tab" />;
 
-const createLabel = (iconName, labelText) => (
-	<span>
-		<Icon name={iconName} />
-		{labelText}
-	</span>
-);
-
-const LoginLabel = createLabel('login', 'Login');
-const RegisterLabel = createLabel('login', 'Register');
+const createLabel = labelText => <span>{labelText}</span>;
+const LoginLabel = createLabel('Login');
+const RegisterLabel = createLabel('Register');
 
 const panes = [
 	{ menuItem: <Menu.Item key="login" as={Nav} to={`/`} content={LoginLabel} /> },
-	{ menuItem: <Menu.Item key="register" as={Nav} to={`/`} content={RegisterLabel} /> }
+	{ menuItem: <Menu.Item key="register" as={Nav} to={`/workers`} content={RegisterLabel} /> }
 ];
 
-const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />;
+const TabNav = () => <Tab panes={panes} renderActiveOnly={false} className="tabs" />;
 
 export default TabNav;
