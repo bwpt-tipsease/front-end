@@ -7,7 +7,6 @@ import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
 
 import './App.css';
-import workerData from './data';
 
 function App() {
 	const [ workers, setWorkers ] = useState([]);
