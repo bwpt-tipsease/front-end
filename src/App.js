@@ -9,7 +9,6 @@ import './App.css';
 
 function App() {
 	const [ workers, setWorkers ] = useState([]);
-	console.log('workers', workers);
 
 	useEffect(() => {
 		axios
@@ -19,6 +18,8 @@ function App() {
 			})
 			.catch(err => console.log(err));
 	}, []);
+
+	console.log('workers', workers);
 
 	return (
 		<div className="App">

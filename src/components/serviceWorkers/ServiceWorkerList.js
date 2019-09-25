@@ -14,8 +14,8 @@ function ServiceWorkerList(props) {
 							<img src="https://fakeimg.pl/100/" alt="worker" />
 							<h1>{worker.worker_name}</h1>
 							<h3>Job: {worker.description}</h3>
-							<h4>Tagline: Need a tagline </h4>
-							<h4>Time in job: Need a time in job</h4>
+							<h4>Tagline: ????? </h4>
+							<h4>Time in job: ?????</h4>
 						</div>
 					</Link>
 				))}
