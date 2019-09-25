@@ -8,14 +8,14 @@ import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
 import './App.css';
 
 function App() {
-	const [ workers, setWorker ] = useState([]);
+	const [ workers, setWorkers ] = useState([]);
 	console.log('workers', workers);
 
 	useEffect(() => {
 		axios
 			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers ')
 			.then(res => {
-				console.log('data', res.data);
+				setWorkers(res.data);
 			})
 			.catch(err => console.log(err));
 	}, []);
