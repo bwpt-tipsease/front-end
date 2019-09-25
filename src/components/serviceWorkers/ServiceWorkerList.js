@@ -11,15 +11,11 @@ function ServiceWorkerList(props) {
 				{props.workers.map(worker => (
 					<Link to={`/workers/${worker.id}`} key={worker.id}>
 						<div className="worker-card">
-							<img src={worker.avatar} alt="worker" />
-							<h1>
-								{worker.first_name} {worker.last_name}
-							</h1>
-							<h3>Job: This is my (job) at (such and such restaurant)</h3>
-							<h4>Tagline: "This is my tagline"</h4>
-							<h4>
-								Time in job: {worker.id} years, {worker.id} months
-							</h4>
+							<img src="https://fakeimg.pl/100/" alt="worker" />
+							<h1>{worker.worker_name}</h1>
+							<h3>Job: {worker.description}</h3>
+							<h4>Tagline: Need a tagline </h4>
+							<h4>Time in job: Need a time in job</h4>
 						</div>
 					</Link>
 				))}
