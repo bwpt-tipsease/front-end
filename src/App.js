@@ -14,8 +14,6 @@ function App() {
 	return (
 		<div className="App">
 			{/* These will need to be separated into routes */}
-			<WorkerList />
-			<LoginForm />
 			<SignUp />
 			{/* Nav */}
 			<nav className="nav">
