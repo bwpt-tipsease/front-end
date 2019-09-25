@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import LoginForm from './components/forms/Login';
+import SignUp from './components/forms/SignUp';
 import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
 
 import './App.css';
+import workerData from './data';
 
 function App() {
 	const [ workers, setWorkers ] = useState([]);
@@ -23,6 +25,8 @@ function App() {
 
 	return (
 		<div className="App">
+			{/* These will need to be separated into routes */}
+			<SignUp />
 			{/* Nav */}
 			<nav className="nav">
 				<div className="nav-logo">
