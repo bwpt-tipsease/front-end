@@ -33,7 +33,6 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 				{touched.confirmpassword && errors.confirmpassword && <p className="error">{errors.confirmpassword}</p>}
 				<Field type="password" name="confirmpassword" placeholder="Confirm Password" autoComplete="" />
 
-
 				{touched.creditcardnumber && errors.creditcardnumber && <p className="error">{errors.creditcardnumber}</p>}
 				<Field type="number" name="creditcardnumber" placeholder="Credti Card Number" autoComplete="" />
 
@@ -41,7 +40,7 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 				<Field type="number" name="expdate" placeholder="Expiration Date" autoComplete="" />
 				
 				{touched.cvcnumbers && errors.cvcnumbers && <p className="error">{errors.cvcnumbers}</p>}
-				<Field type="numbers" name="cvcnumbers" placeholder="CVC Numbers" autoComplete="" />
+				<Field type="number" name="cvcnumbers" placeholder="CVC Numbers" autoComplete="" />
 
 			<h2> Billing Address </h2>
 
