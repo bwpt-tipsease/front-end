@@ -192,7 +192,7 @@ button:focus {
 
 .tabs a:hover {
 	color: #57d978;
-	border: 1px solid #57d978;
+	border: 1px solid rgba(87, 217, 120, 0.4);
 	background-color: rgba(87, 217, 120, 0.4);
 }
 
