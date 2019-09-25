@@ -11,6 +11,15 @@ function App() {
 	const [ workers, setWorker ] = useState([]);
 	console.log('workers', workers);
 
+	useEffect(() => {
+		axios
+			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers ')
+			.then(res => {
+				console.log('data', res.data);
+			})
+			.catch(err => console.log(err));
+	}, []);
+
 	return (
 		<div className="App">
 			{/* Nav */}
