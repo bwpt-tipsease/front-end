@@ -5,6 +5,7 @@ import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
 
 import './App.css';
+import SignUp from './components/forms/SignUp';
 import workerData from './data';
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
 	console.log(workers);
 	return (
 		<div className="App">
+			{/* These will need to be separated into routes */}
+			<SignUp />
 			{/* Nav */}
 			<nav className="nav">
 				<div className="nav-logo">
