@@ -18,6 +18,8 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 	);
 
 	return (
+
+		
 		<div>
 			<h1>Sign Up</h1>
 			<Form>
