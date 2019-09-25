@@ -12,7 +12,7 @@ function App() {
 
 	useEffect(() => {
 		axios
-			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers ')
+			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers')
 			.then(res => {
 				setWorkers(res.data);
 			})
