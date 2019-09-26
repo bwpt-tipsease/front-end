@@ -5,6 +5,7 @@ import LoginForm from './components/forms/Login';
 import SignUp from './components/forms/SignUp';
 import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
+import AddImage from './components/forms/AddImage';
 
 import './App.css';
 
@@ -37,6 +38,7 @@ function App() {
 			<Route exact path="/register" component={SignUp} />
 			<Route exact path="/workers" render={props => <ServiceWorkerList workers={workers} {...props} />} />
 			<Route path="/workers/:id" render={props => <ServiceWorkerCard workers={workers} {...props} />} />
+			<Route path="/settings" render={props => <AddImage workers={workers} {...props} />} />
 		</div>
 	);
 }
