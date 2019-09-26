@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
 import LoginForm from './components/forms/Login';
 import SignUp from './components/forms/SignUp';
@@ -25,8 +25,6 @@ function App() {
 
 	return (
 		<div className="App">
-			{/* These will need to be separated into routes */}
-			<SignUp />
 			{/* Nav */}
 			<nav className="nav">
 				<div className="nav-logo">
@@ -41,6 +39,7 @@ function App() {
 			{/* Routes */}
 			<TabNav />
 			<Route exact path="/" component={LoginForm} />
+			<Route exact path="/register" component={SignUp} />
 			<Route exact path="/workers" render={props => <ServiceWorkerList workers={workers} {...props} />} />
 			<Route path="/workers/:id" render={props => <ServiceWorkerCard workers={workers} {...props} />} />
 		</div>
