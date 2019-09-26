@@ -28,11 +28,11 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 				<button type="submit">Submit</button>
 			</Form>
 
-			{/* {users.map((user, index) => (
+			{users.map((user, index) => (
 				<div key={index} className="user-info">
 					<p>Email: {user.email}</p>
 				</div>
-			))} */}
+			))}
 		</div>
 	);
 };
