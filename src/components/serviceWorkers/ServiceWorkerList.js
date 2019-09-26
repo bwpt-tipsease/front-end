@@ -25,7 +25,6 @@ function ServiceWorkerList(props) {
 	return (
 		<div>
 			<h1>Select a worker to tip</h1>
-
 			<div className="worker-list">
 				{props.workers.map(worker => (
 					<Link to={`/workers/${worker.id}`} key={worker.id}>

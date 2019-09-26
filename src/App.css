@@ -3,11 +3,11 @@
 	color: #57d978;
 }
 .worker-card {
-	border: 1px solid #000;
+	border: 1px solid #aaa;
 	border-radius: 5px;
 	margin: 10px;
 	line-height: 1.1;
-	margin: 10px;
+	padding-bottom: 10px;
 }
 
 .worker-list {
@@ -31,13 +31,13 @@ a:active {
 
 .worker-list > * {
 	cursor: pointer;
-	transition: 0.25s opacity, 0.25s transform;
+	transition: 0.3s opacity, 0.3s transform;
 }
 
 .worker-list:hover > *,
 .worker-list:focus-within > * {
 	opacity: 0.25;
-	transform: scale(0.95);
+	transform: scale(0.98);
 }
 
 .worker-list:hover > :hover,
@@ -131,7 +131,7 @@ button:focus {
 	display: flex;
 	justify-content: space-between;
 	color: #57d978;
-	padding-bottom: 50px;
+	/* padding-bottom: 50px; */
 }
 
 .nav-links {
@@ -165,7 +165,7 @@ button:focus {
 	font-size: 20px;
 	padding: 13px 0 7px 0;
 	display: flex;
-	margin: 0 auto;
+	margin: 50px auto 0 auto;
 	font-size: 20px;
 }
 
@@ -211,7 +211,7 @@ button:focus {
 
 .tips-section {
 	max-width: 70%;
-	margin: 50px auto;
+	margin: 0px auto;
 	max-width: 1200px;
 }
 
@@ -242,7 +242,7 @@ button:focus {
 
 .btn-wrapper {
 	width: 83%;
-	margin: 50px auto;
+	margin: 30px auto;
 }
 
 a.back-btn {
