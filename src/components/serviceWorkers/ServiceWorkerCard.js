@@ -9,11 +9,12 @@ function ServiceWorkerCard(props) {
 
 	return (
 		<div className="worker-card">
-			<img src="https://fakeimg.pl/300/" alt="worker" />
-			<h1>{worker.worker_name}</h1>
-			<h3>Job: {worker.description}</h3>
-			<h4>Tagline: ????? </h4>
-			<h4>Time in job: ?????</h4>
+			<div className="worker-card-details">
+				<img src={worker.photo} alt="worker" className="worker-img" />
+				<h1>{worker.worker_name}</h1>
+				<h3>Job: {worker.description}</h3>
+				<h4>Time in job: </h4>
+			</div>
 		</div>
 	);
 }
