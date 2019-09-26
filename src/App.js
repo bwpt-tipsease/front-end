@@ -31,10 +31,6 @@ function App() {
 					<img src="https://bit.ly/2n7dW0i" alt="logo" />
 					<p>Tipsease</p>
 				</div>
-				<div className="nav-links">
-					{/* <Link to="/">Login</Link>
-					<Link to="/workers">Workers</Link> */}
-				</div>
 			</nav>
 			{/* Routes */}
 			<TabNav />

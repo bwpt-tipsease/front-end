@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ServiceWorkerCard(props) {
 	console.log('Card Props', props);
@@ -8,14 +9,21 @@ function ServiceWorkerCard(props) {
 	});
 
 	return (
-		<div className="worker-card">
-			<div className="worker-card-details">
-				<img src={worker.photo} alt="worker" className="worker-img" />
-				<h1>{worker.worker_name}</h1>
-				<h3>Job: {worker.description}</h3>
-				<h4>Time in job: </h4>
+		<section className="tips-section">
+			<div className="tips-wrapper">
+				<div className="tips-worker">
+					<img src={worker.photo} alt="worker" className="worker-img" />
+					<h1>{worker.worker_name}</h1>
+					<h3>{worker.description}</h3>
+				</div>
+				<div className="tips-component">!!!!!TIPS COMPONENT GOES HERE!!!!!</div>
 			</div>
-		</div>
+			<div className="btn-wrapper">
+				<Link to="/workers" className="back-btn">
+					Back to workers list ↵
+				</Link>
+			</div>
+		</section>
 	);
 }
 

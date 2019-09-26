@@ -32,7 +32,7 @@ function ServiceWorkerList(props) {
 						<div className="worker-card">
 							<img src={worker.photo} alt="worker" className="worker-img" />
 							<h1>{worker.worker_name}</h1>
-							<h3>Job: {worker.description}</h3>
+							<h3>{worker.description}</h3>
 							<h4>Time in job: {timeInJob(worker.start_date)}</h4>
 						</div>
 					</Link>
