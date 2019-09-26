@@ -209,7 +209,7 @@ button:focus {
 	border-radius: 4px;
 }
 .tips-section {
-	max-width: 80%;
+	max-width: 70%;
 	margin: 50px auto;
 }
 
@@ -225,21 +225,22 @@ button:focus {
 
 .tips-worker {
 	margin: 10px;
-	width: 40%;
+	width: 30%;
 	border-radius: 5px;
 	line-height: 1.1;
+	border: 1px solid #57d978;
 }
 .tips-component {
 	border: 1px solid #57d978;
 	color: #57d978;
 	margin: 10px;
-	width: 60%;
+	width: 70%;
 	border-radius: 5px;
 }
 
 .btn-wrapper {
 	width: 83%;
-	margin: 80px auto;
+	margin: 50px auto;
 }
 
 a.back-btn {
