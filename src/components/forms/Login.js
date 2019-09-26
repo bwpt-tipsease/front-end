@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
+import TabNav from '../tabs/TabNav.js';
 
 const LoginForm = ({ errors, touched, status, resetForm }) => {
 	// console.log('status', status);
@@ -19,6 +20,7 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 	return (
 		<div>
 			{/* <h1>Login</h1> */}
+			<TabNav />
 			<Form>
 				{touched.email && errors.email && <p className="error">{errors.email}</p>}
 				<Field type="email" name="email" placeholder="Email" />

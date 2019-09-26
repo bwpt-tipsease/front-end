@@ -208,9 +208,11 @@ button:focus {
 	min-height: 300px;
 	border-radius: 4px;
 }
+
 .tips-section {
 	max-width: 70%;
 	margin: 50px auto;
+	max-width: 1200px;
 }
 
 .tips-wrapper {

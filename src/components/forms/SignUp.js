@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
+import TabNav from '../tabs/TabNav';
 
 const SignUpForm = ({ errors, touched, status, resetForm }) => {
 	const [ users, setUsers ] = useState([]);
@@ -17,6 +18,7 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 
 	return (
 		<div>
+			<TabNav />
 			<Form>
 				{touched.username && errors.username && <p className="error">{errors.username}</p>}
 				<Field type="text" name="username" placeholder="Username" />

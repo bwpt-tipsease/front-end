@@ -5,7 +5,6 @@ import LoginForm from './components/forms/Login';
 import SignUp from './components/forms/SignUp';
 import ServiceWorkerList from './components/serviceWorkers/ServiceWorkerList';
 import ServiceWorkerCard from './components/serviceWorkers/ServiceWorkerCard';
-import TabNav from './components/tabs/TabNav.js';
 
 import './App.css';
 
@@ -33,7 +32,7 @@ function App() {
 				</div>
 			</nav>
 			{/* Routes */}
-			<TabNav />
+
 			<Route exact path="/" component={LoginForm} />
 			<Route exact path="/register" component={SignUp} />
 			<Route exact path="/workers" render={props => <ServiceWorkerList workers={workers} {...props} />} />
