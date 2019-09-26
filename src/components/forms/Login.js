@@ -10,7 +10,6 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 	useEffect(
 		() => {
 			if (status) {
-				// sets users stored in state to the status - which is response.data
 				setUsers(prevUsers => [ ...prevUsers, status ]);
 			}
 		},
@@ -29,14 +28,11 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 				<button type="submit">Submit</button>
 			</Form>
 
-			{users.map(
-				(user, index) => (
-					<div key={index} className="user-info">
-						<p>Email: {user.email}</p>
-					</div>
-				)
-				// console.log('user', user)
-			)}
+			{/* {users.map((user, index) => (
+				<div key={index} className="user-info">
+					<p>Email: {user.email}</p>
+				</div>
+			))} */}
 		</div>
 	);
 };

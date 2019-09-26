@@ -30,11 +30,11 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 				<button type="submit">Submit</button>
 			</Form>
 
-			{users.map((user, index) => (
+			{/* {users.map((user, index) => (
 				<div key={index} className="user-info">
 					<p>Email: {user.email}</p>
 				</div>
-			))}
+			))} */}
 		</div>
 	);
 };
@@ -42,8 +42,7 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 export default withFormik({
 	mapPropsToValues: props => {
 		return {
-			firstname: props.firstname || '',
-			lastname: props.lastname || '',
+			username: props.username || '',
 			email: props.email || '',
 			password: props.password || ''
 		};
@@ -53,13 +52,14 @@ export default withFormik({
 		password: yup.string().min(8, '* Password must be 8 characters').required('* Password is required'),
 		username: yup.string().min(6, '* Username must contain 6 charaters').required('* Username is required')
 	}),
-	handleSubmit: (values, { setStatus, resetForm }) => {
+	handleSubmit: (values, { props, setStatus, resetForm }) => {
 		console.log('values', values);
 
 		axios
 			.post('https://reqres.in/api/users', values)
 			.then(response => {
 				setStatus(response.data);
+				props.history.push('/workers');
 			})
 			.catch(error => console.log(error));
 
