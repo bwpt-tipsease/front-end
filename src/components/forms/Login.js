@@ -57,7 +57,7 @@ export default withFormik({
 			.post('https://agile-escarpment-31149.herokuapp.com/api/auth/login', values)
 			.then(response => {
 				setStatus(response.data);
-				localStorage.setItem('jwt', response.token);
+				localStorage.setItem('jwt', response.data.token);
 				props.history.push('/workers');
 			})
 			.catch(error => console.log(error));
