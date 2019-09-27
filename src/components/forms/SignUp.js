@@ -20,6 +20,7 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 		<div>
 			<TabNav />
 			<Form>
+				{/* Full name, description, start date */}
 				{touched.username && errors.username && <p className="error">{errors.username}</p>}
 				<Field type="text" name="username" placeholder="Username" />
 
@@ -28,7 +29,7 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 
 				{touched.password && errors.password && <p className="error">{errors.password}</p>}
 				<Field type="password" name="password" placeholder="Password" autoComplete="" />
-
+				{/* radio btns - service worker or tipper */}
 				<button type="submit">Submit</button>
 			</Form>
 
@@ -58,9 +59,10 @@ export default withFormik({
 		console.log('values', values);
 
 		axios
-			.post('https://reqres.in/api/users', values)
+			.post('https://agile-escarpment-31149.herokuapp.com/api/auth/register', values)
 			.then(response => {
 				setStatus(response.data);
+				localStorage.setItem('jwt', response.data.token);
 				props.history.push('/workers');
 			})
 			.catch(error => console.log(error));
