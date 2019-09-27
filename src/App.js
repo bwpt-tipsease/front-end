@@ -12,8 +12,13 @@ function App() {
 	const [ workers, setWorkers ] = useState([]);
 
 	useEffect(() => {
+		console.log(localStorage.getItem('jwt'));
 		axios
-			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers')
+			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers', {
+				headers: {
+					authorization: localStorage.getItem('jwt')
+				}
+			})
 			.then(res => {
 				setWorkers(res.data);
 			})
