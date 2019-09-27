@@ -7,6 +7,7 @@ const Tipbuttons = (props) => {
 
 	const sendTip = () => {
 		if (!tips) return;
+		console.log('test');
 		Axios.put(
 			`https://agile-escarpment-31149.herokuapp.com/api/serviceworkers/balance/${props.workerId}`,
 			{
@@ -33,7 +34,7 @@ const Tipbuttons = (props) => {
 				$10
 			</button>
 
-			<button className="confirmtip" onClick={() => sendTip} > Confirm Tip </button>
+			<button className="confirmtip" onClick={sendTip} > Confirm Tip </button>
 
 			{message ? <p>{message}</p> : null}
 		</div>
