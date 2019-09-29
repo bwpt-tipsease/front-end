@@ -63,7 +63,7 @@ export default withFormik({
 			.then(response => {
 				setStatus(response.data);
 				localStorage.setItem('jwt', response.data.token);
-				props.history.push('/workers');
+				props.history.push('/');
 			})
 			.catch(error => console.log(error));
 
