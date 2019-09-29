@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 function ServiceWorkerList(props) {
-	console.log('in the List component', props);
-
 	function timeInJob(dateString) {
 		const startDate = new Date(dateString.replace(' ', 'T'));
 		const now = new Date();
@@ -21,7 +19,6 @@ function ServiceWorkerList(props) {
 		const months = b.diff(a, 'months');
 		return `${years} ${years === 1 ? 'year' : 'years'}, ${months} ${months === 1 ? 'month' : 'months'}`;
 	}
-
 	return (
 		<div>
 			<h1>Select a worker to tip</h1>

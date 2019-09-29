@@ -4,7 +4,7 @@ import { withFormik, Field, Form } from 'formik';
 import * as yup from 'yup';
 import TabNav from '../tabs/TabNav';
 
-const SignUpForm = ({ errors, touched, status, resetForm }) => {
+const SignUpForm = ({ errors, touched, status }) => {
 	const [ users, setUsers ] = useState([]);
 
 	useEffect(
@@ -20,16 +20,12 @@ const SignUpForm = ({ errors, touched, status, resetForm }) => {
 		<div>
 			<TabNav />
 			<Form>
-				{/* Full name, description, start date */}
 				{touched.username && errors.username && <p className="error">{errors.username}</p>}
 				<Field type="text" name="username" placeholder="Username" />
-
 				{touched.email && errors.email && <p className="error">{errors.email}</p>}
 				<Field type="email" name="email" placeholder="Email" />
-
 				{touched.password && errors.password && <p className="error">{errors.password}</p>}
 				<Field type="password" name="password" placeholder="Password" autoComplete="" />
-				{/* radio btns - service worker or tipper */}
 				<button type="submit">Submit</button>
 			</Form>
 

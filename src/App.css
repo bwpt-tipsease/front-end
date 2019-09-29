@@ -233,37 +233,42 @@ button:focus {
 	border: 1px solid #57d978;
 }
 .tips-component {
-	border: 1px solid #57d978;
 	color: #57d978;
 	margin: 10px;
-	width: 70%;
+	width: 60%;
+	padding: 0 5%;
 	border-radius: 5px;
 }
 
 .btn-wrapper {
-	width: 83%;
-	margin: 30px auto;
+	text-align: left;
+	padding: 20px 40px;
+}
+
+.btn-wrapper a {
+	min-width: 30%;
 }
 
 a.back-btn {
-	/* display: flex; */
-	color: #57d978;
-	border: 1px solid #57d978;
+	background-color: #57d978;
+	color: #fff;
 	font-size: 20px;
 	border-radius: 4px;
-	padding: 10px 20px;
+	padding: 10px 68px;
 	text-decoration: none;
 	line-height: 1.5;
 }
 
 a.back-btn:hover {
-	background-color: #57d978;
-	color: #fff;
+	color: #57d978;
+	border: 1px solid #57d978;
+	background-color: #fff;
 }
 
 .tips-component {
 	display: flex;
 	flex-direction: column;
+	margin: 0;
 }
 
 .tips-component button {
@@ -277,7 +282,7 @@ a.back-btn:hover {
 .tip-display p {
 	font-size: 175px;
 	margin: 0;
-	padding: 25px;
+	padding: 50px;
 }
 
 .tip-btns {

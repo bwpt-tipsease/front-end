@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import TipButtons from '../../tips/Tips';
 
 function ServiceWorkerCard(props) {
-	console.log('Card Props', props);
-
 	const worker = props.workers.find(worker => {
 		return worker.id === Number(props.match.params.id);
 	});

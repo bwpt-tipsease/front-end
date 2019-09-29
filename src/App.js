@@ -11,7 +11,6 @@ import './App.css';
 function App() {
 	const [ workers, setWorkers ] = useState([]);
 	useEffect(() => {
-		console.log(localStorage.getItem('jwt'));
 		axios
 			.get('https://agile-escarpment-31149.herokuapp.com/api/serviceworkers', {
 				headers: {
@@ -23,8 +22,6 @@ function App() {
 			})
 			.catch(err => console.log(err));
 	}, []);
-
-	console.log('workers', workers);
 
 	return (
 		<div className="App">

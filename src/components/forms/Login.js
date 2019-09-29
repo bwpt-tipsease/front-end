@@ -5,7 +5,6 @@ import * as yup from 'yup';
 import TabNav from '../tabs/TabNav.js';
 
 const LoginForm = ({ errors, touched, status, resetForm }) => {
-	// console.log('status', status);
 	const [ users, setUsers ] = useState([]);
 
 	useEffect(
@@ -19,12 +18,10 @@ const LoginForm = ({ errors, touched, status, resetForm }) => {
 
 	return (
 		<div>
-			{/* <h1>Login</h1> */}
 			<TabNav />
 			<Form>
 				{touched.email && errors.email && <p className="error">{errors.email}</p>}
 				<Field type="email" name="email" placeholder="Email" />
-
 				{touched.password && errors.password && <p className="error">{errors.password}</p>}
 				<Field type="password" name="password" placeholder="Password" autoComplete="" />
 				<button type="submit">Submit</button>
@@ -51,8 +48,6 @@ export default withFormik({
 		password: yup.string().min(8, '* Password must be 8 characters').required('* Password is required')
 	}),
 	handleSubmit: (values, { props, setStatus, resetForm }) => {
-		console.log('values', values);
-
 		axios
 			.post('https://agile-escarpment-31149.herokuapp.com/api/auth/login', values)
 			.then(response => {
