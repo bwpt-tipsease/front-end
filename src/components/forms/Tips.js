@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
-const Tipbuttons = (props) => {
+const Tipbuttons = props => {
 	const [ tips, setTips ] = useState(0);
 	const [ message, setMessage ] = useState(null);
 
@@ -18,8 +18,9 @@ const Tipbuttons = (props) => {
 					authorization: localStorage.getItem('jwt')
 				}
 			}
-        ).then( res => setMessage (res.data.success))
-        .catch( error => console.log(error)); 
+		)
+			.then(res => setMessage(res.data.success))
+			.catch(error => console.log(error));
 	};
 
 	return (
@@ -34,7 +35,9 @@ const Tipbuttons = (props) => {
 				$10
 			</button>
 
-			<button className="confirmtip" onClick={sendTip} > Confirm Tip </button>
+			<button className="confirm-tip" onClick={sendTip}>
+				Confirm Tip
+			</button>
 
 			{message ? <p>{message}</p> : null}
 		</div>
