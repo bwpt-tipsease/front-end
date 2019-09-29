@@ -10,7 +10,6 @@ import './App.css';
 
 function App() {
 	const [ workers, setWorkers ] = useState([]);
-
 	useEffect(() => {
 		console.log(localStorage.getItem('jwt'));
 		axios
@@ -36,8 +35,8 @@ function App() {
 					<p>Tipsease</p>
 				</div>
 			</nav>
-			{/* Routes */}
 
+			{/* Routes */}
 			<Route exact path="/" component={LoginForm} />
 			<Route exact path="/register" component={SignUp} />
 			<Route exact path="/workers" render={props => <ServiceWorkerList workers={workers} {...props} />} />

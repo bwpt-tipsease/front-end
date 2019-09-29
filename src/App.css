@@ -260,3 +260,27 @@ a.back-btn:hover {
 	background-color: #57d978;
 	color: #fff;
 }
+
+.tips-component {
+	display: flex;
+	flex-direction: column;
+}
+
+.tips-component button {
+	width: 100%;
+	margin: 10px;
+}
+.tip-display h1 {
+	font-size: 30px;
+	margin-bottom: 0;
+}
+.tip-display p {
+	font-size: 175px;
+	margin: 0;
+	padding: 25px;
+}
+
+.tip-btns {
+	display: flex;
+	flex-direction: row;
+}

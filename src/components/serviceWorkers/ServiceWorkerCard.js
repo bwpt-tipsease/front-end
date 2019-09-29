@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Tipbuttons from '../forms/Tips';
+import TipButtons from '../../tips/Tips';
 
 function ServiceWorkerCard(props) {
 	console.log('Card Props', props);
@@ -17,8 +17,8 @@ function ServiceWorkerCard(props) {
 					<h1>{worker.worker_name}</h1>
 					<h3>{worker.description}</h3>
 				</div>
-				<div className="tips-component"> 
-			      	<Tipbuttons workerId={worker.id} /> 
+				<div className="tips-component">
+					<TipButtons worker={worker.worker_name} workerId={worker.id} />
 				</div>
 			</div>
 			<div className="btn-wrapper">
